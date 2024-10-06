@@ -1,0 +1,38 @@
+.qs-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+.qs-content img {
+    width: 150px;
+    height: 150px;
+}
+
+.qs-content-choose {
+    width: 60%;
+}
+
+.qs-content-choose-div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.qs-content-footer-div {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+.text-center {
+    text-align: center;
+}
+
+.button-style {
+    margin-right: 10px;
+    cursor: "pointer";
+}
+.margin-top-10 {
+    margin-top: 10px;
+}

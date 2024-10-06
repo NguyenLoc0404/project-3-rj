@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NewQuestion component snapshot 1`] = `
+<DocumentFragment>
+   
+  <div
+    class="container d-flex justify-content-center align-items-center flex-column"
+  >
+    <h3
+      class="mb-4"
+    >
+      Would You Rather
+    </h3>
+    <p
+      class="mb-4"
+    >
+      Create Your Own Poll
+    </p>
+    <form
+      class="d-flex flex-column w-100 align-items-center"
+    >
+      <div
+        class="mb-3 w-80"
+      >
+        <label
+          class="form-label"
+        >
+          First Option
+        </label>
+        <input
+          class="form-control"
+          placeholder="Enter Option One Text Here"
+          type="text"
+          value=""
+        />
+      </div>
+      <div
+        class="mb-3 w-80"
+      >
+        <label
+          class="form-label"
+        >
+          Second Option
+        </label>
+        <input
+          class="form-control"
+          placeholder="Enter Option Two Text Here"
+          type="text"
+          value=""
+        />
+      </div>
+      <button
+        class="btn btn-primary"
+        disabled=""
+        type="submit"
+      >
+        Submit
+      </button>
+    </form>
+  </div>
+</DocumentFragment>
+`;

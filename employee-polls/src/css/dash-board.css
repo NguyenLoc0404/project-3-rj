@@ -1,0 +1,9 @@
+.new-questions-section, .done-questions-section {
+    border: 1px solid grey;
+    margin-bottom: 10px;
+}
+
+.new-questions-section h3, .done-questions-section h3 {
+    border-bottom: 1px solid gray;
+    text-align:center;
+}
