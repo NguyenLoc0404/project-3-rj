@@ -10,12 +10,14 @@ const Login = () => {
   const [username, setUsername] = useState('sarahedo'); 
   const [password, setPassword] = useState('password123');
   const [error, setError] = useState('');
-
+  const questions = useSelector((state) => state.questions);
+  
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const location = useLocation(); // Lấy thông tin về trang trước khi người dùng bị chuyển hướng
   const { from } = location.state || { from: { pathname: '/' } }; // Trang người dùng muốn đến trước khi đăng nhập, mặc định là "/"
-
+  console.log('from',from);
+  
   const handleLogin = () => {
     console.log('handleLogin');
     
@@ -25,7 +27,19 @@ const Login = () => {
       dispatch(setAuthUser(username));
       sessionStorage.setItem('username', username);
       setError(''); 
-      navigate(from); // Điều hướng đến trang người dùng đã cố gắng truy cập trước khi đăng nhập
+      if (from.pathname.startsWith("/questions/")) {
+        const questionId = from.pathname.split("/").pop();
+        const questionExists = Object.keys(questions).includes(questionId);
+  
+        if (!questionExists) {
+          navigate("/404");
+        } 
+        else {
+          navigate(from);
+        }
+      } else {
+        navigate(from);
+      }
     } else {
       setError('The authentication was not successful.');
     }
